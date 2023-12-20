@@ -1,0 +1,16 @@
+<!-- books/templates/books/search_books.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Search</title>
+</head>
+<body>
+    <h2>Book Search</h2>
+    <form method="post" action="{% url 'search_books' %}">
+        {% csrf_token %}
+        <label for="search_text">Search:</label>
+        <input type="text" name="search_text" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
